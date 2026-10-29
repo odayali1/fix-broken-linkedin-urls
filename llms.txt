@@ -1,0 +1,40 @@
+# Fix Broken LinkedIn URLs
+
+> Recover the current LinkedIn profile from an old, stale, or broken URL. The response is a live profile. No match, no charge.
+
+Mawsool publishes this as an Apify Actor. Send the LinkedIn URL you already stored, even if it 404s. A hit returns the current URL, headline, company, title, experience, and education, fetched at run time. A miss is free.
+
+## Run
+
+- Apify Actor: https://apify.com/oday/mawsool-fix-broken-linkedin-urls
+- Call: `oday/mawsool-fix-broken-linkedin-urls`
+- API key: https://mawsool.tech/ and https://docs.mawsool.tech/
+- Contact: osama@mawsool.tech, info@mawsool.tech
+
+## Result
+
+- Live profile: exact or confident. Safe to replace the stored URL.
+- Review this match: likely. A person checks the name, company, and title first.
+- No match, free: nothing found. Not charged.
+
+## Price
+
+Starting from $1 per 1,000 live profiles on Apify. Gold, Platinum, and Diamond are $1. The free plan is $1.80. Misses are free.
+
+## Use it when
+
+The URL is old. A name change, a certificate added to the name, or a custom-link edit replaced the slug. The person is often still on LinkedIn.
+
+## Use something else when
+
+- The URL already opens and you only need the current company and headline: https://apify.com/oday/mawsool-linkedin-profile-freshness
+- You stored the old company and want a comparison: https://apify.com/oday/mawsool-linkedin-company-checker
+- The URL already opens and you want a full scrape: https://apify.com/oday/mawsool-linkedin-profile-details
+
+## Pages
+
+- Why LinkedIn URLs break: docs/why-linkedin-urls-break.md
+- No match, no charge: docs/no-match-no-charge.md
+- The profile is live: docs/live-linkedin-profile.md
+
+Mawsool is not affiliated with LinkedIn.

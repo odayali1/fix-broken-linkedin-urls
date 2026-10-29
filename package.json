@@ -1,0 +1,23 @@
+{
+  "name": "mawsool-fix-broken-linkedin-urls",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Fix broken LinkedIn URLs and return a live profile. No match, no charge. Hosted on Apify by Mawsool.",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "apify": "^3.7.0"
+  },
+  "devDependencies": {
+    "@apify/tsconfig": "^0.1.1",
+    "@types/node": "^24.0.0",
+    "typescript": "^6.0.0"
+  },
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "tsc"
+  },
+  "author": "Mawsool",
+  "license": "UNLICENSED"
+}

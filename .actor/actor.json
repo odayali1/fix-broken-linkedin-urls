@@ -1,0 +1,30 @@
+{
+  "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+  "actorSpecification": 1,
+  "name": "mawsool-fix-broken-linkedin-urls",
+  "title": "Fix Broken LinkedIn URLs | Live Fresh Data",
+  "description": "Paste an old or broken LinkedIn URL and get a live profile: current link, headline, company, title, and experience. No match, no charge. For stale CRM data after a name change or a custom URL edit. Recovery on old lists is often up to 70%. Review a likely match before you replace the URL.",
+  "seoTitle": "Fix Broken LinkedIn URLs | No Match Free",
+  "seoDescription": "Fix broken LinkedIn URLs and get the live profile: current link, headline, company, and experience. No match, no charge. Built for stale CRM links.",
+  "categories": ["LEAD_GENERATION", "SOCIAL_MEDIA", "AUTOMATION"],
+  "version": "1.0",
+  "buildTag": "latest",
+  "minMemoryMbytes": 256,
+  "maxMemoryMbytes": 2048,
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 86400,
+    "memoryMbytes": 512
+  },
+  "meta": {
+    "templateId": "ts-empty",
+    "generatedBy": "Mawsool"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "pricing": "./pay_per_event.json",
+  "dockerfile": "../Dockerfile"
+}

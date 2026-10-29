@@ -1,0 +1,21 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Recovered LinkedIn URLs",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "Results",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    },
+    "flatView": {
+      "type": "string",
+      "title": "Live profile",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=live"
+    },
+    "runSummary": {
+      "type": "string",
+      "title": "Run summary",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/OUTPUT"
+    }
+  }
+}

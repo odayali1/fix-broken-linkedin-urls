@@ -1,0 +1,18 @@
+{
+  "actorSpecification": 1,
+  "events": {
+    "linkedin-url-recovered": {
+      "title": "LinkedIn URL recovered",
+      "description": "One old or broken LinkedIn URL that returned a live profile: current URL, headline, company, title, and experience. Exact, confident, and likely matches are charged. No match, no charge. Review likely matches before you replace the URL.",
+      "isPrimaryEvent": true,
+      "eventTieredPricingUsd": {
+        "FREE": { "tieredEventPriceUsd": 0.0018 },
+        "BRONZE": { "tieredEventPriceUsd": 0.0015 },
+        "SILVER": { "tieredEventPriceUsd": 0.0012 },
+        "GOLD": { "tieredEventPriceUsd": 0.001 },
+        "PLATINUM": { "tieredEventPriceUsd": 0.001 },
+        "DIAMOND": { "tieredEventPriceUsd": 0.001 }
+      }
+    }
+  }
+}

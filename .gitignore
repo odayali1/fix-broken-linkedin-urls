@@ -1,0 +1,12 @@
+node_modules
+dist
+storage
+.idea
+.vscode
+*.log
+.DS_Store
+.env
+.env.*
+*.pem
+secrets.json
+credentials.json

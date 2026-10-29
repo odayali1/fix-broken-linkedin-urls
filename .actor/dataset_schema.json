@@ -1,0 +1,89 @@
+{
+  "actorSpecification": 1,
+  "title": "Live LinkedIn profiles",
+  "description": "One row per old URL. The Live profile view is the current person. Experience and education are the live history. A No match, free row was not charged.",
+  "fields": {
+    "type": "object",
+    "properties": {
+      "inputUrl": { "type": "string", "title": "Old LinkedIn URL" },
+      "currentUrl": { "type": ["string", "null"], "title": "Current LinkedIn URL" },
+      "result": { "type": "string", "title": "Result" },
+      "matchType": { "type": "string", "title": "Match" },
+      "fullName": { "type": ["string", "null"], "title": "Name" },
+      "firstName": { "type": ["string", "null"], "title": "First name" },
+      "lastName": { "type": ["string", "null"], "title": "Last name" },
+      "headline": { "type": ["string", "null"], "title": "Headline" },
+      "jobTitle": { "type": ["string", "null"], "title": "Current title" },
+      "company": { "type": ["string", "null"], "title": "Current company" },
+      "companyLinkedInUrl": { "type": ["string", "null"], "title": "Company URL" },
+      "location": { "type": ["string", "null"], "title": "Location" },
+      "connections": { "type": ["string", "null"], "title": "Connections" },
+      "about": { "type": ["string", "null"], "title": "About" },
+      "skills": { "type": ["string", "null"], "title": "Skills" },
+      "skillsCount": { "type": ["integer", "null"], "title": "Skills count" },
+      "experienceCount": { "type": "integer", "title": "Roles" },
+      "experience": { "type": "array", "title": "Experience" },
+      "educationCount": { "type": "integer", "title": "Schools" },
+      "education": { "type": "array", "title": "Education" },
+      "checkedAt": { "type": "string", "title": "Checked at" },
+      "charge": { "type": "string", "title": "Charge" }
+    }
+  },
+  "views": {
+    "live": {
+      "title": "Live profile",
+      "transformation": {
+        "fields": [
+          "inputUrl",
+          "currentUrl",
+          "result",
+          "matchType",
+          "fullName",
+          "headline",
+          "jobTitle",
+          "company",
+          "location",
+          "connections",
+          "experienceCount",
+          "charge",
+          "checkedAt"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "inputUrl": { "label": "Old URL", "format": "link" },
+          "currentUrl": { "label": "Current URL", "format": "link" },
+          "companyLinkedInUrl": { "label": "Company URL", "format": "link" },
+          "checkedAt": { "label": "Checked at", "format": "date" }
+        }
+      }
+    },
+    "career": {
+      "title": "Experience and education",
+      "transformation": {
+        "fields": [
+          "inputUrl",
+          "fullName",
+          "headline",
+          "jobTitle",
+          "company",
+          "companyLinkedInUrl",
+          "location",
+          "about",
+          "skills",
+          "experience",
+          "education",
+          "charge"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "inputUrl": { "label": "Old URL", "format": "link" },
+          "companyLinkedInUrl": { "label": "Company URL", "format": "link" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Fix Broken LinkedIn URLs | Live Fresh Data",
+  "type": "object",
+  "schemaVersion": 1,
+  "description": "Send old, stale, or broken LinkedIn profile URLs. A hit returns the live profile: current URL, headline, company, title, experience, and education. No match, no charge. Review a likely match before you replace the URL.",
+  "properties": {
+    "urls": {
+      "title": "Old or broken LinkedIn URLs",
+      "type": "array",
+      "description": "Profile URLs you already stored, including links that no longer open. Example: https://www.linkedin.com/in/old-or-broken-slug/",
+      "editor": "stringList",
+      "prefill": ["https://www.linkedin.com/in/osama-abdelhadi/"],
+      "sectionCaption": "1) Old LinkedIn URLs",
+      "sectionDescription": "Use this on stale data: old CRM exports, ATS links, and vanity URLs that 404 after a name change or a custom-link edit. A URL that already opens this week belongs in Profile Freshness or the Profile Scraper.",
+      "items": { "type": "string" }
+    },
+    "urlsCsv": {
+      "title": "Or paste CSV",
+      "type": "string",
+      "description": "CSV with a url or linkedinUrl column. One old profile URL per row is also accepted.",
+      "editor": "textarea",
+      "prefill": "url\nhttps://www.linkedin.com/in/osama-abdelhadi/"
+    },
+    "fileUrl": {
+      "title": "Or upload a CSV file",
+      "type": "string",
+      "description": "CSV export from HubSpot, Salesforce, Clay, or an ATS. Column: url, linkedinUrl, or linkedin_url.",
+      "editor": "fileupload"
+    },
+    "maxUrls": {
+      "title": "Maximum URLs",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1,
+      "maximum": 1000000,
+      "sectionCaption": "2) Limits",
+      "sectionDescription": "You pay only when a current URL comes back. A 404 is free. Keep likely matches out of an automatic CRM overwrite.",
+      "description": "Cost-control cap. Maximum 1,000,000."
+    },
+    "concurrency": {
+      "title": "Concurrent requests",
+      "type": "integer",
+      "description": "How many stale URLs to resolve at the same time.",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 20
+    },
+    "resumeId": {
+      "title": "Resume ID (optional)",
+      "type": "string",
+      "description": "Reuse the same ID after a stopped large run. URLs that already recovered are skipped, so you are not charged again.",
+      "editor": "textfield"
+    },
+    "freshStart": {
+      "title": "Resolve finished URLs again",
+      "type": "boolean",
+      "description": "Turn this on to ignore saved progress and resolve the whole list again.",
+      "default": false
+    }
+  }
+}
